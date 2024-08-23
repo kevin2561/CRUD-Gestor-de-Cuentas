@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0;
+}
+#caja-regresar{
+    width: 150px;
+    height: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+
+
+}
+.botones {
+    width: 125px;
+    border-radius: 8px;
+    font-size: 19px;
+    padding: 5px;
+    background-color: #181818;
+    color: #f4f4f5;
+    font-weight: 600;
+}
+a{
+    text-decoration: none !important;
+    color: #f4f4f5 !important;
+
+}
+#caja-1{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+#caja-2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column  ;
+    margin-top: 20px;
+}
+.caja-input{
+    margin: 10px 20px;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 5px;
+
+}
+#tbody-datos tr{
+    cursor: pointer;
+} 
+.contenedor-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 20px;
+}
+.iconos{
+    font-size: 25px;
+    cursor: pointer;
+}
+#updateModal input{
+    padding-top: 3rem !important;
+    padding-bottom: 1.5rem !important;
+}
+#updateModal label{
+    font-size: 18px !important;
+}
+

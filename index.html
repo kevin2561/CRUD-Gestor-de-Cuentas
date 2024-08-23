@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <main id="contenido">
+        <header id="main-header" class="header-contenedor">
+            <div class="header-logo">
+                <img src="imagenes/pclogo.jpg" alt="">
+
+            </div>
+
+            <div class="header-name">
+                <h1>Sistema Cuentas</h1>
+            </div>
+
+            <div class="header-historial">
+                <button id="btn-historial" class="botones">Ver Historial</button>
+            </div>
+        </header>
+
+
+
+        <!-- Button trigger modal -->
+        <div class="container">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Agregar Registro
+            </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo Registro</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form id="formulario-insertar">
+                        <div class="modal-body">
+
+                            <div class="form-floating">
+                                <input name="txt-descripcion" type="text" class="form-control" id="floatingInputGrid"
+                                    required>
+                                <label for="floatingInputGrid">Descripcion</label>
+                            </div>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="form-floating">
+                                <input name="txt-mes" type="text" required class="form-control" id="floatingInputGrid">
+                                <label for="floatingInputGrid">Mes</label>
+                            </div>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="form-floating">
+                                <input name="txt-año" maxlength="4" type="text" class="form-control"
+                                    id="floatingInputGrid">
+                                <label for="floatingInputGrid">Año</label>
+                            </div>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="form-floating">
+                                <input name="txt-precio" required type="number" step="0.1" class="form-control"
+                                    value="0" id="floatingInputGrid">
+                                <label for="floatingInputGrid">Precio</label>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button id="btn-registrar" type="submit" class="btn btn-primary">Aceptar</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="caja-imagen-fondo">
+            <div class="img-fondo"><img src="imagenes/fondo.jpg" alt=""></div>
+            <div class="img-fondo"><img src="imagenes/fondo02.jpg" alt=""> </div>
+
+
+
+
+        </div>
+
+
+
+
+    </main>
+
+    <footer id="main-footer">
+        Derechos Reservados
+    </footer>
+</body>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</html>

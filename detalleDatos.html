@@ -1,0 +1,241 @@
+<head>
+    <link rel="stylesheet" href="detalleStyles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<div id="caja-regresar">
+    <button id="btn-regresar" class="botones"><a href="index.html">Regresar</a></button>
+</div>
+
+<div class="container">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Filtrar Mes
+    </button>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalFiltrarAño">
+        Filtrar Año
+    </button>
+</div>
+
+
+
+<div id="datos-tabla" class="container">
+    <h1 id="mes-año"></h1>
+    <table id="tabla-datos" class="table">
+        <thead>
+            <tr>
+                <td>Fila</td>
+                <td>Código</td>
+                <td>Descripcion</td>
+                <td className='text-center'>Fecha</td>
+                <td className='text-center'>Gasto</td>
+                <td></td>
+                <td></td>
+
+
+            </tr>
+        </thead>
+        <tbody id="tbody-datos">
+
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colSpan="4" className='text-center'>Total</th>
+                <th id="totalMes" className='text-center'></th>
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+    <div id="caja-total">
+        <div id="caja-boton-total">
+
+        </div>
+
+        <div id="resultado-total">
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL MES Y AÑO -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese Mes y Año</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form id="formulario-filtrar-datos">
+                <div class="modal-body">
+                    <div id="filtrar-registro">
+
+                        <div id="caja-2">
+
+                            <div class="contenedor-input">
+                                <label for="">Mes</label>
+                                <input id="input-filtrar-mes" name="filtrar-mes" class="caja-input" type="text">
+                            </div>
+
+                            <div class="contenedor-input">
+
+
+                                <label for="">Año</label>
+
+                                <input id="input-filtrar-año" name="filtrar-año" class="caja-input" type="text"
+                                    maxlength="4">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL SOLO AÑO -->
+
+<div class="modal fade" id="modalFiltrarAño" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Ingrese el Año</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" id="formularioFilterAño">
+                <div class="modal-body">
+                    <div class="contenedor-input">
+                        <label for="">Año</label>
+                        <input id="input-solo-año" required name="filtrarAño" class="caja-input" maxlength="4"
+                            type="text">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- MODAL PARA ACTUALIZAR -->
+
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Registro</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="formUpdate">
+
+
+                <div class="modal-body">
+
+                    <div class="form-floating">
+                        <input name="id" type="text" class="form-control" id="floatingInputGrid" readonly>
+                        <label for="floatingInputGrid">Codigo</label>
+
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-floating">
+                        <input name="descripcion" type="text" class="form-control" id="floatingInputGrid" required>
+                        <label for="floatingInputGrid">Descripcion</label>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-floating">
+                        <input name="fecha" type="text" required class="form-control" id="floatingInputGrid">
+                        <label for="floatingInputGrid">Fecha</label>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-floating">
+                        <input name="mes" type="text" class="form-control" value="0" id="floatingInputGrid">
+                        <label for="floatingInputGrid">Mes</label>
+                    </div>
+                </div>
+
+
+                <div class="modal-body">
+
+                    <div class="form-floating">
+                        <input name="año" maxlength="4" type="text" class="form-control" id="floatingInputGrid">
+                        <label for="floatingInputGrid">Año</label>
+                    </div>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="form-floating">
+                        <input name="precio" type="number" step="0.1" class="form-control" value="0"
+                            id="floatingInputGrid">
+                        <label for="floatingInputGrid">Precio</label>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button id="btn-registrar" type="submit" class="btn btn-primary"
+                        data-bs-dismiss="modal">Actualizar</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- MODAL PARA ELIMINAR -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Eliminar Registro</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form id="formDelete">
+                <div class="modal-body">
+                    <input type="hidden" name="id">
+                    ¿Esta seguro que desea Eliminar el Registro <span id="codigo-registro"></span>?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
